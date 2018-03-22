@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tracking_number: MyString
+  order_status: MyString
+  total_price: 9.99
+  •: MyString
+  product_cost: 9.99
+
+two:
+  tracking_number: MyString
+  order_status: MyString
+  total_price: 9.99
+  •: MyString
+  product_cost: 9.99
