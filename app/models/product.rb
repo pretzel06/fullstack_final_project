@@ -3,4 +3,5 @@ class Product < ApplicationRecord
   belongs_to :original
 
   validates :product_name, :release_date, :product_status, :sales_price, presence: true
+  mount_uploader :image, ImageUploader
 end
