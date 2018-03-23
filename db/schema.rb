@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180322235749) do
+ActiveRecord::Schema.define(version: 20180323050322) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -49,12 +49,16 @@ ActiveRecord::Schema.define(version: 20180322235749) do
     t.string "customer_phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "order_id"
+    t.index ["order_id"], name: "index_customers_on_order_id"
   end
 
   create_table "manufacturers", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "product_id"
+    t.index ["product_id"], name: "index_manufacturers_on_product_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -64,12 +68,18 @@ ActiveRecord::Schema.define(version: 20180322235749) do
     t.string "total_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "customer_id"
+    t.integer "product_id"
+    t.index ["customer_id"], name: "index_orders_on_customer_id"
+    t.index ["product_id"], name: "index_orders_on_product_id"
   end
 
   create_table "originals", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "product_id"
+    t.index ["product_id"], name: "index_originals_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -77,8 +87,13 @@ ActiveRecord::Schema.define(version: 20180322235749) do
     t.date "release_date"
     t.string "product_status"
     t.decimal "sales_price"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "manufacturer_id"
+    t.integer "original_id"
+    t.index ["manufacturer_id"], name: "index_products_on_manufacturer_id"
+    t.index ["original_id"], name: "index_products_on_original_id"
   end
 
 end
