@@ -1,4 +1,4 @@
 class Customer < ApplicationRecord
-  belongs_to :order
+  has_many :orders
   validates :customer_name, :customer_address, :customer_phone_number, presence: true
 end
