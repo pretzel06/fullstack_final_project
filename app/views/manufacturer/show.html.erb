@@ -1,5 +1,7 @@
-<div class="ui container">
+<div class="ui attached segment">
   <h1>Manufacturer#show</h1>
   <p>Find me in app/views/manufacturer/show.html.erb</p>
-  <%= render partial: 'product/product', collection: @manufacturers_products %>
+  <div class="ui divided items">
+    <%= render partial: 'product/product', collection: @manufacturers_products %>
+  </div>
 </div>
