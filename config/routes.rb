@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 
   # get 'customers/missing_email', to: 'customers#missing_email'
-  # get 'customers/alphabetized', to: 'customers#alphabetized'
+  get 'product/product_results', to: 'product#product_results'
 
   resources :product, :original, :manufacturer, only: [:index, :show]
 
