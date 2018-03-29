@@ -1,8 +1,8 @@
 <div class="ui attached segment">
   <%= form_tag product_product_results_path, method: 'get', class: 'ui form' do %>
-    <div class="ui action input">
+    <div class="ui fluid action input">
       <input type="text" name="search_keywords" id="search_keywords" placeholder="Search...">
-      <%= submit_tag 'Search', class: 'ui button' %>
+      <button class="ui button" type="submit" name="search">Search</button>
     </div>
   <% end %>
 </div>
