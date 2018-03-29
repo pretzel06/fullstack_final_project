@@ -1,6 +1,6 @@
 class ManufacturerController < ApplicationController
   def index
-    @manufacturers = Manufacturer.order(:name)
+    @manufacturers = Manufacturer.order(:name).page(params[:page])
   end
 
   def show

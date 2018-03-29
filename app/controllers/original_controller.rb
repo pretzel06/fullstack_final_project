@@ -1,6 +1,6 @@
 class OriginalController < ApplicationController
   def index
-    @originals = Original.order(:name)
+    @originals = Original.order(:name).page(params[:page])
   end
 
   def show
