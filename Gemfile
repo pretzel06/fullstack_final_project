@@ -12,6 +12,7 @@ gem 'carrierwave'
 gem 'ransack'
 gem 'kaminari'
 gem 'formtastic'
+gem 'has_scope'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
