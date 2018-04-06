@@ -1,7 +1,8 @@
 class Product < ApplicationRecord
   belongs_to :manufacturer
   belongs_to :original
-  has_and_belongs_to_many :orders
+  has_many :product_orders
+  has_many :orders, through: :product_orders
 
   validates :product_name, :release_date, :product_status, :sales_price, presence: true
   mount_uploader :image, ImageUploader

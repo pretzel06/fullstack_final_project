@@ -252,6 +252,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise
+  formtastic
   jbuilder (~> 2.5)
   kaminari
   listen (>= 3.0.5, < 3.2)
