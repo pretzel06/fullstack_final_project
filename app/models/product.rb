@@ -11,4 +11,8 @@ class Product < ApplicationRecord
     keywords = '%' + keywords + '%'
     Product.where('product_name LIKE ?', keywords)
   end
+
+  def name
+    product_name
+  end
 end
