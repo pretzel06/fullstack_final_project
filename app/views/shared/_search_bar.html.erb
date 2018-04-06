@@ -1,6 +1,15 @@
 <div class="ui attached segment">
   <%= form_tag product_product_results_path, method: 'get', class: 'ui form' do %>
     <div class="ui fluid action input">
+      <div class="ui selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Gender</div>
+        <div class="menu">
+          <div class="item" data-value="1">Male</div>
+          <div class="item" data-value="0">Female</div>
+        </div>
+      </div>
       <input type="text" name="search_keywords" id="search_keywords" placeholder="Search...">
       <button class="ui button" type="submit" name="search">Search</button>
     </div>
